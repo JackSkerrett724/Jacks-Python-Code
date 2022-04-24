@@ -665,7 +665,7 @@ def PlayGame():
                             print(f"You rolled double {dice.GetDice1}'s to escape jail!")
                             game.GetPlayerList()[index].SetJailCount(0)
                         else:
-                            print(f"You did not roll doubles, {3 - game.GetPlayerList()[index]} attempts left")
+                            print(f"You did not roll doubles, {3 - game.GetPlayerList()[index].GetJailCount()} attempts left")
 
                 if game.GetPlayerList()[index].GetJailCount() == 3:
                     game.GetPlayerList()[index].PutInJail(False)
